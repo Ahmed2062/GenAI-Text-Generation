@@ -8,7 +8,7 @@ poem-generator/
 │
 ├── data/                   # datasets
 
-│          └── poems.json          # raw scraped poems
+│    └── poems.json          # raw scraped poems
 
 │    └── cleaned.json        # cleaned & deduplicated poems
 
@@ -37,17 +37,15 @@ poem-generator/
 
 Clone the repository:
 
-git clone https://github.com/Ahmed2062/poem-generator.git
-
-cd poem-generator
+    git clone https://github.com/Ahmed2062/poem-generator.git
+    cd poem-generator
 
 
 Create a virtual environment (recommended):
 
-python -m venv venv
-source venv/bin/activate   # On Linux/Mac
-
-venv\Scripts\activate      # On Windows
+    python -m venv venv
+    source venv/bin/activate   # On Linux/Mac
+    venv\Scripts\activate      # On Windows
 
 
 Install dependencies:
@@ -81,10 +79,7 @@ Generate a poem from a trained model:
 
 🎯 Example Output
 
-Prompt:
-
-A rainy night in Delhi
-
+Prompt: A rainy night in Delhi
 
 Generated Poem:
 
@@ -93,7 +88,7 @@ Lanterns flicker in puddles where silence drifts slow.
 The air tastes of jasmine and thunder’s confession,  
 As the city folds gently into a midnight of poems.  
 
-⚡ Features
+⚡ Features:
 
 Scrapes real poems from poets.org
 
@@ -105,7 +100,7 @@ CLI-based workflow (easy to reproduce)
 
 Generates new, creative poems from prompts
 
-📌 Requirements
+📌 Requirements:
 
 Python 3.8+
 
@@ -113,7 +108,7 @@ GPU recommended (for training)
 
 Install all dependencies via:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 🤝 Contributing
 
