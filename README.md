@@ -37,7 +37,8 @@ poem-generator/
 
 Clone the repository:
 
-git clone https://github.com/<your-username>/poem-generator.git
+git clone https://github.com/Ahmed2062/poem-generator.git
+
 cd poem-generator
 
 
@@ -45,37 +46,38 @@ Create a virtual environment (recommended):
 
 python -m venv venv
 source venv/bin/activate   # On Linux/Mac
+
 venv\Scripts\activate      # On Windows
 
 
 Install dependencies:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 📝 Usage
 1. Scrape Poems
 
 Scrape poems from poets.org (default: 5 pages):
 
-python src/scrape_poems.py --pages 5 --output data/poems.json
+    python src/scrape_poems.py --pages 5 --output data/poems.json
 
 2. Clean Poems
 
 Remove duplicates and formatting issues:
 
-python src/clean_poems.py --input data/poems.json --output data/cleaned.json
+    python src/clean_poems.py --input data/poems.json --output data/cleaned.json
 
 3. Train Model
 
 Fine-tune GPT-2 on the cleaned poems:
 
-python src/train_model.py --data data/cleaned.json --output models/poem-gpt2 --epochs 3 --batch_size 8
+    python src/train_model.py --data data/cleaned.json --output models/poem-gpt2 --epochs 3 --batch_size 8
 
 4. Generate Poems
 
 Generate a poem from a trained model:
 
-python src/generate.py --prompt "A rainy night in Delhi" --model models/poem-gpt2
+    python src/generate.py --prompt "A rainy night in Delhi" --model models/poem-gpt2
 
 🎯 Example Output
 
