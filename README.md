@@ -122,11 +122,21 @@ python src/generate.py --prompt "The view from my window" --model models/poem-gp
 
 * **Python 3.9+** (Developed and tested with Python 3.9.7)
 * **Hardware:** A GPU with at least 6GB of VRAM is highly recommended for training.
+---
 
-Contributing
+### Contributing
 
-Feel free to fork the repo, open issues, or submit pull requests to improve scraping, cleaning, or model training.
+Contributions are welcome! If you'd like to improve the project, please follow these steps:
 
-License
+1.  **Fork the repository** and create a new branch for your feature or bug fix.
+2.  **Make your changes** in the source code.
+3.  If you add a new dependency, please install it in your virtual environment and then update the `requirements.txt` file by running the following command from your project's root directory:
+    ```bash
+    # This ensures the dependency list is kept up-to-date
+    pip freeze > requirements.txt
+    ```
+4.  **Submit a pull request** with a clear description of your changes.
+
+### License
 
 MIT License – you’re free to use, modify, and share.
