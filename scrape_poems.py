@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import time
-import argparse # 1. Import the library
+import argparse
 import os
 
 def scrape_poems(num_pages: int, output_file: str):
@@ -63,19 +63,16 @@ def scrape_poems(num_pages: int, output_file: str):
     print(f"\n✅ Done! Total poems scraped: {len(poems)}")
     print(f"Saved to {output_file}")
 
-# 2. Add this block to handle command-line arguments
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scrape poems from poets.org.")
     
-    # Define the --pages argument
     parser.add_argument("--pages", type=int, default=5, help="Number of pages to scrape (default: 5)")
     
-    # Define an optional --output argument for the filename
     parser.add_argument("--output", type=str, default="data/poems.json", help="Output JSON file path")
 
     args = parser.parse_args()
 
-     os.makedirs(os.path.dirname(args.output), exist_ok=True)
+    os.makedirs(os.path.dirname(args.output), exist_ok=True)
     
     # 3. Call the function with the arguments provided by the user
     scrape_poems(args.pages, args.output)
