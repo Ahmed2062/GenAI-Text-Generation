@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import json
 import time
 import argparse
-import os
 
 def scrape_poems(num_pages: int, output_file: str):
     """Scrapes a specified number of pages of poems from poets.org."""
@@ -71,8 +70,6 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=str, default="data/poems.json", help="Output JSON file path")
 
     args = parser.parse_args()
-
-    os.makedirs(os.path.dirname(args.output), exist_ok=True)
     
     # 3. Call the function with the arguments provided by the user
     scrape_poems(args.pages, args.output)
